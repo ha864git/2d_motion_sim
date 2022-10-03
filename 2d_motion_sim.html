@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <title>2D motion simulator for Robo2</title>
+</head>
+
+<body>
+  <form>
+    <label>reference plane<br>
+      <input type="radio" name="reference_plane" value="floor" checked>floor
+      <input type="radio" name="reference_plane" value="right_sole">right sole
+      <input type="radio" name="reference_plane" value="left_sole">left sole
+      <input type="radio" name="reference_plane" value="body">body
+    </label>
+  </form>
+  <hr>
+  <div id="foot_frame">
+    <div class="trim_foot_frame"><img src="images/floor.png" id="floor" alt="" class="layer-img hidden" /></div>
+    <div class="trim_foot_frame"><img src="images/base.png" id="base" alt="" class="layer-img hidden" /></div>
+    <div class="trim_foot_frame"><img src="images/left_foot.png" id="left_foot" alt="" class="layer-img hidden" /></div>
+    <div class="trim_foot_frame"><img src="images/right_foot.png" id="right_foot" alt="" class="layer-img hidden" />
+    </div>
+  </div>
+  <table border="0">
+    <tr>
+      <td colspan="3">Right</td>
+      <td colspan="3">left</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        <div id="id_right_foot_angle" class="degree unselectable">90</div>
+      </td>
+      <td>
+        <div id="id_inc_right_foot" class="incdecbutton unselectable">+</div>
+      </td>
+      <td>
+        <div id="id_dec_right_foot" class="incdecbutton unselectable">-</div>
+      </td>
+      <td>
+        <div id="id_left_foot_angle" class="degree unselectable">90</div>
+      </td>
+      <td>
+        <div id="id_inc_left_foot" class="incdecbutton unselectable">+</div>
+      </td>
+      <td>
+        <div id="id_dec_left_foot" class="incdecbutton unselectable">-</div>
+      </td>
+      <td>
+        <div id="id_reset_foot_angle" class="incdecbutton reset unselectable">Reset</div>
+      </td>
+    </tr>
+  </table>
+  <hr>
+  <div id="leg_frame">
+    <div class="trim_leg_frame"><img src="images/body.png" id="body2" alt="" class="layer-img hidden" /></div>
+    <div class="trim_leg_frame"><img src="images/left_leg.png" id="left_leg" alt="" class="layer-img hidden" /></div>
+    <div class="trim_leg_frame"><img src="images/right_leg.png" id="right_leg" alt="" class="layer-img hidden" /></div>
+  </div>
+  <table border="0">
+    <tr>
+      <td colspan="3">Right</td>
+      <td colspan="3">left</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        <div id="id_right_leg_angle" class="degree unselectable">90</div>
+      </td>
+      <td>
+        <div id="id_inc_right_leg" class="incdecbutton unselectable">+</div>
+      </td>
+      <td>
+        <div id="id_dec_right_leg" class="incdecbutton unselectable">-</div>
+      </td>
+      <td>
+        <div id="id_left_leg_angle" class="degree unselectable">90</div>
+      </td>
+      <td>
+        <div id="id_inc_left_leg" class="incdecbutton unselectable">+</div>
+      </td>
+      <td>
+        <div id="id_dec_left_leg" class="incdecbutton unselectable">-</div>
+      </td>
+      <td>
+        <div id="id_reset_leg_angle" class="incdecbutton reset unselectable">Reset</div>
+      </td>
+    </tr>
+  </table>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="app.js"></script>
+
+</body>
+
+</html>
